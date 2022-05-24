@@ -1,6 +1,6 @@
 local playerDetector = peripheral.wrap("right")
 local chatBox = peripheral.wrap("left")
-local players = [];
+local players = {};
 
 function checkPlayers() do
     for k,v in pairs(players) do
