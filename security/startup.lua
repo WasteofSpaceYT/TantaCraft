@@ -7,4 +7,10 @@ function checkForUpdates()
         if(version[i] ~= "") then
             shell.run("wget " + version[i])
         end
+    end
+    file.close()
 end
+
+os.pullEvent = os.pullEventRaw
+
+shell.run("bg security.lua")
