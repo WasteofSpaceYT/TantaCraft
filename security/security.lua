@@ -14,9 +14,10 @@ while true do
     checkPlayers()
     if(playerDetector.isPlayersInRange(50)) then
         for k,v in pairs (playerDetector.getPlayersInRange(50)) do
-            if(v == nil && players[v] ~= nil) then
+            if(v == nil and players[v] ~= nil) then
                 table.insert(players, v)
                 chatBox.setText("Player " .. i .. " has entered the area.")
             end
         end
     end
+end
