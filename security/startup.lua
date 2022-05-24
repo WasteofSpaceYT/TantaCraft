@@ -3,9 +3,9 @@ function checkForUpdates()
     shell.run("wget https://raw.githubusercontent.com/WasteofSpaceYT/TantaCraft/main/version/security.txt")
     local file = fs.open("security.txt", "r")
     local version = file.readLines()
-    for(i in version) do
-        if(version[i] ~= "") then
-            shell.run("wget " + version[i])
+    for v,k in pairs(version) do
+        if(v ~= "") then
+            shell.run("wget " + v)
         end
     end
     file.close()
